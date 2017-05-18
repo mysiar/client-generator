@@ -36,12 +36,16 @@ export default class ReactCrudGenerator {
     this.registerTemplate(templatePath, 'reducers/foo/list.js');
     this.registerTemplate(templatePath, 'reducers/foo/update.js');
     this.registerTemplate(templatePath, 'reducers/foo/show.js');
+    this.registerTemplate(templatePath, 'reducers/foo/config.js');
 
     // routes
     this.registerTemplate(templatePath, 'routes/foo.js');
 
     // entrypoint
     this.registerTemplate(templatePath, 'api/_entrypoint.js');
+
+    // config
+    this.registerTemplate(templatePath, 'config/foo.js');
   }
 
   registerTemplate(templatePath, path) {
@@ -66,6 +70,7 @@ export default class ReactCrudGenerator {
     // Create directories
     mkdirp.sync(`${dir}/api`); // This directory may already exist
     mkdirp.sync(`${dir}/routes`); // This directory may already exist
+    mkdirp.sync(`${dir}/config`); // This directory may already exist
     this.createDir(`${dir}/actions/${lc}`);
     this.createDir(`${dir}/components/${lc}`);
     this.createDir(`${dir}/reducers/${lc}`);
@@ -95,9 +100,15 @@ export default class ReactCrudGenerator {
     this.createFile('reducers/foo/list.js', `${dir}/reducers/${lc}/list.js`, context);
     this.createFile('reducers/foo/update.js', `${dir}/reducers/${lc}/update.js`, context);
     this.createFile('reducers/foo/show.js', `${dir}/reducers/${lc}/show.js`, context);
+    this.createFile('reducers/foo/config.js', `${dir}/reducers/${lc}/config.js`, context);
 
     // routes
-    this.createFile('routes/foo.js', `${dir}/routes/${lc}.js`, context)
+    this.createFile('routes/foo.js', `${dir}/routes/${lc}.js`, context);
+
+    // config
+    if (!fs.existsSync(`${dir}/config/${lc}.js`)) {
+      this.createFile('config/foo.js', `${dir}/config/${lc}.js`, context);
+    }
   }
 
   entrypoint(apiEntry, dir) {
