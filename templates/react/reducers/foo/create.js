@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux'
+import configState from '../../config/{{{lc}}}/create';
 
 export function error(state = null, action) {
   switch (action.type) {
@@ -30,4 +31,12 @@ export function created(state = null, action) {
   }
 }
 
-export default combineReducers({error, loading, created});
+export function config(state = configState, action) {
+  switch (action.type) {
+
+    default:
+      return state;
+  }
+}
+
+export default combineReducers({error, loading, created, config});

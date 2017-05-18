@@ -1,4 +1,5 @@
-import { combineReducers } from 'redux'
+import { combineReducers } from 'redux';
+import configState from '../../config/{{{lc}}}/list';
 
 export function error(state = null, action) {
   switch (action.type) {
@@ -39,4 +40,12 @@ export function items(state = [], action) {
   }
 }
 
-export default combineReducers({error, loading, items});
+export function config(state = configState, action) {
+  switch (action.type) {
+
+    default:
+      return state;
+  }
+}
+
+export default combineReducers({error, loading, items, config});

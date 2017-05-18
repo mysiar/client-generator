@@ -1,4 +1,5 @@
-import { combineReducers } from 'redux'
+import { combineReducers } from 'redux';
+import configState from '../../config/{{{lc}}}/show';
 
 export function retrieveError(state = null, action) {
   switch (action.type) {
@@ -39,4 +40,12 @@ export function retrieved(state = null, action) {
   }
 }
 
-export default combineReducers({retrieveError, retrieveLoading, retrieved});
+export function config(state = configState, action) {
+  switch (action.type) {
+
+    default:
+      return state;
+  }
+}
+
+export default combineReducers({retrieveError, retrieveLoading, retrieved, config});

@@ -1,6 +1,7 @@
 export default {
   _RenderMethod: 0,
+  id: true,
 {{#each fields}}
-  {{{ name }}}: 0,
+  {{{ name }}}: true,
 {{/each}}
 }

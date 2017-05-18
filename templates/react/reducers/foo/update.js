@@ -1,4 +1,5 @@
-import { combineReducers } from 'redux'
+import { combineReducers } from 'redux';
+import configState from '../../config/{{{lc}}}/update';
 
 export function retrieveError(state = null, action) {
   switch (action.type) {
@@ -78,4 +79,12 @@ export function updated(state = null, action) {
   }
 }
 
-export default combineReducers({retrieveError, retrieveLoading, retrieved, updateError, updateLoading, updated});
+export function config(state = configState, action) {
+  switch (action.type) {
+
+    default:
+      return state;
+  }
+}
+
+export default combineReducers({retrieveError, retrieveLoading, retrieved, updateError, updateLoading, updated, config});

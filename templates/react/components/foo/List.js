@@ -35,9 +35,9 @@ class List extends Component {
           <table className="table table-striped table-hover">
           <thead>
             <tr>
-              <th>Id</th>
+              {this.props.config.id && <th>Id</th> }
 {{#each fields}}
-              <th>{{name}}</th>
+              {this.props.config.{{name}} && <th>{{name}}</th> }
 {{/each}}
               <th></th>
               <th></th>
@@ -46,9 +46,9 @@ class List extends Component {
           <tbody>
           {this.props.items.map(item =>
             <tr className={item['@id']} key={item['@id']}>
-              <td>{item['@id']}</td>
+              {this.props.config.id && <td>{item['@id']}</td> }
 {{#each fields}}
-              <td>{item['{{{ name }}}']}</td>
+              {this.props.config.{{name}} && <td>{item['{{{ name }}}']}</td> }
 {{/each}}
               <td>
                 <Link to={`show/${encodeURIComponent(item['@id'])}`}>
@@ -79,6 +79,7 @@ const mapStateToProps = (state) => {
     error: state.{{{ lc }}}.list.error,
     loading: state.{{{ lc }}}.list.loading,
     deletedItem: state.{{{ lc }}}.del.deleted,
+    config: state.{{{ lc }}}.list.config,
   };
 };
 
