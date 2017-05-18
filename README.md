@@ -5,6 +5,9 @@ Works especially well with APIs built with the [API Platform](https://api-platfo
 
 [![Build Status](https://travis-ci.org/api-platform/generate-crud.svg?branch=master)](https://travis-ci.org/api-platform/generate-crud)
 
+[![NPM Version](https://img.shields.io/npm/dm/api-platform-generate-crud.svg?style=flat)](https://www.npmjs.com/package/api-platform-generate-crud) 
+[![NPM Downloads](https://img.shields.io/npm/dm/api-platform-generate-crud.svg?style=flat)](https://www.npmjs.com/package/api-platform-generate-crud)
+
 ## Features
 
 * Generate high-quality ES6 components and files built with [React](https://facebook.github.io/react/), [Redux](http://redux.js.org), [React Router](https://reacttraining.com/react-router/) and [Redux Form](http://redux-form.com/) including:
