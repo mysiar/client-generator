@@ -8,7 +8,7 @@ Works especially well with APIs built with the [API Platform](https://api-platfo
 [![NPM Version](https://img.shields.io/npm/v/api-platform-generate-crud.svg?style=flat)](https://www.npmjs.com/package/api-platform-generate-crud)
 [![Build Status](https://travis-ci.org/api-platform/generate-crud.svg?branch=master)](https://travis-ci.org/api-platform/generate-crud) 
 [![NPM Downloads](https://img.shields.io/npm/dm/api-platform-generate-crud.svg?style=flat)](https://www.npmjs.com/package/api-platform-generate-crud)
-[![Package Quality](http://npm.packagequality.com/badge/api-platform-generate-crud.png)](http://packagequality.com/#?package=api-platform-generate-crud)
+[![Package Quality](http://npm.packagequality.com/shield/api-platform-generate-crud.svg)](http://packagequality.com/#?package=api-platform-generate-crud)
 
 ## Features
 
