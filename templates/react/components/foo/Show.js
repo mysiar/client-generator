@@ -52,10 +52,12 @@ class Show extends Component {
           </thead>
           <tbody>
 {{#each fields}}
-            <tr>
-              <td>{{name}}</td>
-              <td>{item['{{{ name }}}']}</td>
-            </tr>
+        {this.props.config.{{name}} &&
+          <tr>
+            <td>{{name}}</td>
+            <td>{item['{{{ name }}}']}</td>
+          </tr>
+        }
 {{/each }}
           </tbody>
         </table>
@@ -79,6 +81,7 @@ const mapStateToProps = (state) => {
     deleteError: state.{{{ lc }}}.del.error,
     deleteLoading: state.{{{ lc }}}.del.loading,
     deleted: state.{{{ lc }}}.del.deleted,
+    config: state.{{{ lc }}}.show.config,
   };
 };
 
