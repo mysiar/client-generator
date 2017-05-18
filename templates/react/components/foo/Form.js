@@ -21,7 +21,7 @@ class Form extends Component {
 
     return <form onSubmit={handleSubmit}>
 {{#each formFields}}
-      <Field component={this.renderField} name="{{{ name }}}" type="{{{ type }}}"{{#if step}} step="{{{ step }}}"{{/if}} placeholder="{{{ description }}}" {{#if required}}required={true}{{/if}}/>
+      {this.props.config.{{name}} && <Field component={this.renderField} name="{{{ name }}}" type="{{{ type }}}"{{#if step}} step="{{{ step }}}"{{/if}} placeholder="{{{ description }}}" {{#if required}}required={true}{{/if}}/> }
 {{/each}}
 
         <button type="submit" className="btn btn-primary">Submit</button>

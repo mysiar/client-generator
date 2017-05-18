@@ -51,7 +51,7 @@ class Update extends Component {
       {this.props.updateError && <div className="alert alert-danger" role="alert"><span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> {this.props.updateError}</div>}
       {this.props.deleteError && <div className="alert alert-danger" role="alert"><span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> {this.props.deleteError}</div>}
 
-      {item && <Form onSubmit={values => this.props.update(item, values)} initialValues={item}/>}
+      {item && <Form onSubmit={values => this.props.update(item, values)} initialValues={item} config={this.props.config}/>}
       <Link to=".." className="btn btn-default">Back to list</Link>
       <button onClick={this.del} className="btn btn-danger">Delete</button>
     </div>;
@@ -70,6 +70,7 @@ const mapStateToProps = (state) => {
     deleted: state.{{{ lc }}}.del.deleted,
     retrieved: state.{{{ lc }}}.update.retrieved,
     updated: state.{{{ lc }}}.update.updated,
+    config: state.{{{ lc }}}.update.config,
   };
 };
 

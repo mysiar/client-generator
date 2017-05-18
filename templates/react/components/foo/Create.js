@@ -27,7 +27,7 @@ class Create extends Component {
       {this.props.loading && <div className="alert alert-info" role="status">Loading...</div>}
       {this.props.error && <div className="alert alert-danger" role="alert"><span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> {this.props.error}</div>}
 
-      <Form onSubmit={this.props.create} values={this.props.item}/>
+      <Form onSubmit={this.props.create} values={this.props.item} config={this.props.config}/>
       <Link to="." className="btn btn-default">Back to list</Link>
     </div>;
   }
@@ -38,6 +38,7 @@ const mapStateToProps = (state) => {
     created: state.{{{ lc }}}.create.created,
     error: state.{{{ lc }}}.create.error,
     loading: state.{{{ lc }}}.create.loading,
+    config: state.{{{ lc }}}.create.config,
   };
 };
 
