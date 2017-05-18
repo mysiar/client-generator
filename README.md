@@ -3,8 +3,6 @@
 A generator to scaffold a React/Redux app with Create-Retrieve-Update-Delete features for any API exposing a Hydra documentation.
 Works especially well with APIs built with the [API Platform](https://api-platform.com) framework.
 
-[<img src="http://npm.packagequality.com/badge/api-platform-generate-crud.png" align="right"/>](http://packagequality.com/#?package=api-platform-generate-crud)
-
 [![NPM Version](https://img.shields.io/npm/v/api-platform-generate-crud.svg?style=flat)](https://www.npmjs.com/package/api-platform-generate-crud)
 [![Build Status](https://travis-ci.org/api-platform/generate-crud.svg?branch=master)](https://travis-ci.org/api-platform/generate-crud) 
 [![NPM Downloads](https://img.shields.io/npm/dm/api-platform-generate-crud.svg?style=flat)](https://www.npmjs.com/package/api-platform-generate-crud)
