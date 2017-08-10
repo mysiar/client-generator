@@ -4,7 +4,7 @@ A generator to scaffold a React/Redux app with Create-Retrieve-Update-Delete fea
 Works especially well with APIs built with the [API Platform](https://api-platform.com) framework.
 
 [![Build Status](https://travis-ci.org/api-platform/generate-crud.svg?branch=master)](https://travis-ci.org/api-platform/generate-crud)
-
+[![npm version](https://badge.fury.io/js/api-platform-generate-crud.svg)](https://badge.fury.io/js/api-platform-generate-crud)
 ## Features
 
 * Generate high-quality ES6 components and files built with [React](https://facebook.github.io/react/), [Redux](http://redux.js.org), [React Router](https://reacttraining.com/react-router/) and [Redux Form](http://redux-form.com/) including:
