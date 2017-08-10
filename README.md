@@ -5,6 +5,8 @@ Works especially well with APIs built with the [API Platform](https://api-platfo
 
 [![Build Status](https://travis-ci.org/api-platform/generate-crud.svg?branch=master)](https://travis-ci.org/api-platform/generate-crud)
 [![npm version](https://badge.fury.io/js/api-platform-generate-crud.svg)](https://badge.fury.io/js/api-platform-generate-crud)
+[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
+
 ## Features
 
 * Generate high-quality ES6 components and files built with [React](https://facebook.github.io/react/), [Redux](http://redux.js.org), [React Router](https://reacttraining.com/react-router/) and [Redux Form](http://redux-form.com/) including:
