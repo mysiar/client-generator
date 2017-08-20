@@ -16,6 +16,43 @@ class List extends Component {
     reset: PropTypes.func.isRequired,
   };
 
+  pagination() {
+    return (
+      <span>
+        {this.props.view['{{{ hydraPrefix }}}first'] &&
+        <IconButton
+          iconClassName="material-icons"
+          tooltip='First' tooltipPosition='top-center'
+          onClick={() => this.props.page(paginationRoute(this.props.view['{{{ hydraPrefix }}}first']))}
+          type='button'
+          style={styleIconButton}
+        >skip_previous</IconButton>}
+        {this.props.view['{{{ hydraPrefix }}}previous'] &&
+        <IconButton
+          iconClassName="material-icons"
+          tooltip='Previous' tooltipPosition='top-center'
+          onClick={() => this.props.page(paginationRoute(this.props.view['{{{ hydraPrefix }}}previous']))}
+          type='button'
+          style={styleIconButton}
+        >fast_rewind</IconButton>}
+        {this.props.view['{{{ hydraPrefix }}}next'] && <IconButton
+          iconClassName="material-icons"
+          tooltip='Next' tooltipPosition='top-center'
+          onClick={() => this.props.page(paginationRoute(this.props.view['{{{ hydraPrefix }}}next']))}
+          type='button'
+          style={styleIconButton}
+        >fast_forward</IconButton>}
+        {this.props.view['{{{ hydraPrefix }}}last'] && <IconButton
+          iconClassName="material-icons"
+          tooltip='Last' tooltipPosition='top-center'
+          onClick={() => this.props.page(paginationRoute(this.props.view['{{{ hydraPrefix }}}last']))}
+          type='button'
+          style={styleIconButton}
+        >skip_next</IconButton>}
+      </span>
+    );
+  }
+
   componentDidMount() {
     this.props.list();
   }
