@@ -25,6 +25,24 @@ class List extends Component {
           className="btn btn-primary btn-sm"
           onClick={() => this.props.page(paginationRoute(this.props.view['{{{ hydraPrefix }}}first']))}
         >First</button> }
+        {this.props.view['{{{ hydraPrefix }}}previous'] &&
+        <button
+          type="button"
+          className="btn btn-primary btn-sm"
+          onClick={() => this.props.page(paginationRoute(this.props.view['{{{ hydraPrefix }}}previous']))}
+        >Previous</button> }
+        {this.props.view['{{{ hydraPrefix }}}next'] &&
+        <button
+          type="button"
+          className="btn btn-primary btn-sm"
+          onClick={() => this.props.page(paginationRoute(this.props.view['{{{ hydraPrefix }}}next']))}
+        >Next</button> }
+        {this.props.view['{{{ hydraPrefix }}}last'] &&
+        <button
+          type="button"
+          className="btn btn-primary btn-sm"
+          onClick={() => this.props.page(paginationRoute(this.props.view['{{{ hydraPrefix }}}last']))}
+        >Last</button> }
       </span>
     );
   }
