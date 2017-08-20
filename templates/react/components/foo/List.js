@@ -24,6 +24,7 @@ class List extends Component {
           type="button"
           className="btn btn-basic btn-sm"
           onClick={() => this.props.page(paginationRoute(this.props.view['{{{ hydraPrefix }}}first']))}
+          disabled={!this.props.view['{{{ hydraPrefix }}}previous']}
         >First</button>
         &nbsp;
         <button
@@ -31,22 +32,20 @@ class List extends Component {
           className="btn btn-basic btn-sm"
           onClick={() => this.props.page(paginationRoute(this.props.view['{{{ hydraPrefix }}}previous']))}
           disabled={!this.props.view['{{{ hydraPrefix }}}previous']}
-        >Previous</button>&nbsp;
-
-        {this.props.view['{{{ hydraPrefix }}}next'] &&
-          <span>
-            <button
-              type="button" className="btn btn-basic btn-sm"
-              onClick={() => this.props.page(paginationRoute(this.props.view['{{{ hydraPrefix }}}next']))}
-            >Next</button>&nbsp;
-          </span>}
-        {this.props.view['{{{ hydraPrefix }}}last'] &&
-          <span>
-            <button
-              type="button" className="btn btn-basic btn-sm"
-              onClick={() => this.props.page(paginationRoute(this.props.view['{{{ hydraPrefix }}}last']))}
-            >Last</button>&nbsp;
-          </span> }
+        >Previous</button>
+        &nbsp;
+        <button
+          type="button" className="btn btn-basic btn-sm"
+          onClick={() => this.props.page(paginationRoute(this.props.view['{{{ hydraPrefix }}}next']))}
+          disabled={!this.props.view['{{{ hydraPrefix }}}next']}
+        >Next</button>
+        &nbsp;
+        <button
+          type="button" className="btn btn-basic btn-sm"
+          onClick={() => this.props.page(paginationRoute(this.props.view['{{{ hydraPrefix }}}last']))}
+          disabled={!this.props.view['{{{ hydraPrefix }}}next']}
+        >Last</button>
+        &nbsp;
       </span>
     );
   }
