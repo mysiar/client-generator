@@ -80,12 +80,14 @@ const mapStateToProps = (state) => {
     error: state.{{{ lc }}}.list.error,
     loading: state.{{{ lc }}}.list.loading,
     deletedItem: state.{{{ lc }}}.del.deleted,
+    view: state.{{{ lc }}}.list.view,
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
     list: () => dispatch(list()),
+    page: (arg) => dispatch(page(arg)),
     reset: () => {
       dispatch(reset());
       dispatch(success(null));
