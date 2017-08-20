@@ -24,14 +24,13 @@ class List extends Component {
           type="button"
           className="btn btn-basic btn-sm"
           onClick={() => this.props.page(paginationRoute(this.props.view['{{{ hydraPrefix }}}first']))}
-          disabled={this.props.view['{{{ hydraPrefix }}}first']}
         >First</button>
         &nbsp;
         <button
           type="button"
           className="btn btn-basic btn-sm"
           onClick={() => this.props.page(paginationRoute(this.props.view['{{{ hydraPrefix }}}previous']))}
-          disabled={this.props.view['{{{ hydraPrefix }}}previous']}
+          disabled={!this.props.view['{{{ hydraPrefix }}}previous']}
         >Previous</button>&nbsp;
 
         {this.props.view['{{{ hydraPrefix }}}next'] &&
