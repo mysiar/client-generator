@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { list, reset } from '../../actions/{{{ lc }}}/list';
+import { list, reset, page } from '../../actions/{{{ lc }}}/list';
 import { success } from '../../actions/{{{ lc }}}/delete';
 import itemToLinks from '../../utils/itemToLinks';
 
