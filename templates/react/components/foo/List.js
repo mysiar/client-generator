@@ -20,13 +20,14 @@ class List extends Component {
   pagination() {
     return (
       <span>
-        {this.props.view['{{{ hydraPrefix }}}first'] &&
+
         <span>
           <button
             type="button" className="btn btn-basic btn-sm"
             onClick={() => this.props.page(paginationRoute(this.props.view['{{{ hydraPrefix }}}first']))}
+            disabled={this.props.view['{{{ hydraPrefix }}}first']}
           >First</button>&nbsp;
-        </span>}
+        </span>
         {this.props.view['{{{ hydraPrefix }}}previous'] &&
         <span>
           <button
