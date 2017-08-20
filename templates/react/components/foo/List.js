@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { list, reset, page } from '../../actions/{{{ lc }}}/list';
 import { success } from '../../actions/{{{ lc }}}/delete';
-import { itemToLinks } from '../../utils/helpers';
+import { paginationRoute, itemToLinks } from '../../utils/helpers';
 
 class List extends Component {
   static propTypes = {
@@ -20,35 +20,11 @@ class List extends Component {
     return (
       <span>
         {this.props.view['{{{ hydraPrefix }}}first'] &&
-        <IconButton
-          iconClassName="material-icons"
-          tooltip='First' tooltipPosition='top-center'
+        <button
+          type="button"
+          className="btn btn-primary btn-sm"
           onClick={() => this.props.page(paginationRoute(this.props.view['{{{ hydraPrefix }}}first']))}
-          type='button'
-          style={styleIconButton}
-        >skip_previous</IconButton>}
-        {this.props.view['{{{ hydraPrefix }}}previous'] &&
-        <IconButton
-          iconClassName="material-icons"
-          tooltip='Previous' tooltipPosition='top-center'
-          onClick={() => this.props.page(paginationRoute(this.props.view['{{{ hydraPrefix }}}previous']))}
-          type='button'
-          style={styleIconButton}
-        >fast_rewind</IconButton>}
-        {this.props.view['{{{ hydraPrefix }}}next'] && <IconButton
-          iconClassName="material-icons"
-          tooltip='Next' tooltipPosition='top-center'
-          onClick={() => this.props.page(paginationRoute(this.props.view['{{{ hydraPrefix }}}next']))}
-          type='button'
-          style={styleIconButton}
-        >fast_forward</IconButton>}
-        {this.props.view['{{{ hydraPrefix }}}last'] && <IconButton
-          iconClassName="material-icons"
-          tooltip='Last' tooltipPosition='top-center'
-          onClick={() => this.props.page(paginationRoute(this.props.view['{{{ hydraPrefix }}}last']))}
-          type='button'
-          style={styleIconButton}
-        >skip_next</IconButton>}
+        >First</button> }
       </span>
     );
   }
