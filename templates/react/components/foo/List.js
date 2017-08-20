@@ -14,35 +14,40 @@ class List extends Component {
     deletedItem: PropTypes.object,
     list: PropTypes.func.isRequired,
     reset: PropTypes.func.isRequired,
+    page: PropTypes.func.isRequired,
   };
 
   pagination() {
     return (
       <span>
         {this.props.view['{{{ hydraPrefix }}}first'] &&
-        <button
-          type="button"
-          className="btn btn-primary btn-sm"
-          onClick={() => this.props.page(paginationRoute(this.props.view['{{{ hydraPrefix }}}first']))}
-        >First</button> }
+        <span>
+          <button
+            type="button" className="btn btn-basic btn-sm"
+            onClick={() => this.props.page(paginationRoute(this.props.view['{{{ hydraPrefix }}}first']))}
+          >First</button>&nbsp;
+        </span>}
         {this.props.view['{{{ hydraPrefix }}}previous'] &&
-        <button
-          type="button"
-          className="btn btn-primary btn-sm"
-          onClick={() => this.props.page(paginationRoute(this.props.view['{{{ hydraPrefix }}}previous']))}
-        >Previous</button> }
+        <span>
+          <button
+            type="button" className="btn btn-basic btn-sm"
+            onClick={() => this.props.page(paginationRoute(this.props.view['{{{ hydraPrefix }}}previous']))}
+          >Previous</button>&nbsp;
+        </span>}
         {this.props.view['{{{ hydraPrefix }}}next'] &&
-        <button
-          type="button"
-          className="btn btn-primary btn-sm"
-          onClick={() => this.props.page(paginationRoute(this.props.view['{{{ hydraPrefix }}}next']))}
-        >Next</button> }
+          <span>
+            <button
+              type="button" className="btn btn-basic btn-sm"
+              onClick={() => this.props.page(paginationRoute(this.props.view['{{{ hydraPrefix }}}next']))}
+            >Next</button>&nbsp;
+          </span>}
         {this.props.view['{{{ hydraPrefix }}}last'] &&
-        <button
-          type="button"
-          className="btn btn-primary btn-sm"
-          onClick={() => this.props.page(paginationRoute(this.props.view['{{{ hydraPrefix }}}last']))}
-        >Last</button> }
+          <span>
+            <button
+              type="button" className="btn btn-basic btn-sm"
+              onClick={() => this.props.page(paginationRoute(this.props.view['{{{ hydraPrefix }}}last']))}
+            >Last</button>&nbsp;
+          </span> }
       </span>
     );
   }
