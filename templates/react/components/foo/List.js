@@ -44,6 +44,7 @@ class List extends Component {
       {this.props.loading && <div className="alert alert-info">Loading...</div>}
       {this.props.deletedItem && <div className="alert alert-success">{this.props.deletedItem['@id']} deleted.</div>}
       {this.props.error && <div className="alert alert-danger">{this.props.error}</div>}
+      {this.pagination()}
 
       <div className="table-responsive">
           <table className="table table-striped table-hover">
